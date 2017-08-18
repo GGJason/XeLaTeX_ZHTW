@@ -1,7 +1,7 @@
 \documentclass[12pt,a4paper]{article}
 
 %開啟設定字體
-\usepackage{fontspect}
+%\usepackage{fontspect}
 
 %使用xeCJK package
 \usepackage{xeCJK}
@@ -12,7 +12,10 @@
 %table of content
 \usepackage{outline}
 
-
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{中文\XeLaTeX 教學}
+\rhead{\thepage}
 %英文字型
 \setmainfont{Times New Roman}
 
@@ -47,7 +50,7 @@
 	\maketitle
 	\newpage
 	\begin{abstract}
-		這份教學的主要目的是希望提供中文 \LaTeX 及 \XeLaTeX 使用者更方便使用的指導，並且在最後附上快速查詢表，提供已經熟悉的使用者能夠快速的查到想要使用的功能。主要參考的是 TUG的資料以及我個人在各個部落格裡面翻出來的資訊，希望讓 \LaTeX 的門檻降低，提昇使用的人口。
+		這份教學的主要目的是希望提供中文 \LaTeX 及 \XeLaTeX 使用者更方便使用的指導，並且在最後附上快速查詢表，提供已經熟悉的使用者能夠快速的查到想要使用的功能。主要參考的是 TUG\footnote{\TeX  User Group}的資料以及我個人在各個部落格裡面翻出來的資訊，希望讓 \LaTeX 的門檻降低，提昇使用的人口。
 	\end{abstract}
 	\newpage
 	\tableofcontents
@@ -59,11 +62,12 @@
 				\TeX 是Donald Ervin Knuth教授所設計出來的排版軟體\footnote{中文維基百科} ，
 			\subsection{\XeLaTeX}
 		\section{ \XeLaTeX 環境設定}
-			我在這邊所使用的是 Ubuntu 14.04 LTS，並且純粹以TeXworks(http://www.tug.org/texworks/)進行環境整合與編譯。後續有機會的話我會逐步補充Windows跟Mac OS的使用方法，不過除了安裝之外其實大多部份視差不多的。
+			我在這邊所使用的是 Ubuntu 14.04 LTS，並且純粹以TeXworks(http://www.tug.org/texworks/)進行環境整合與編譯。後續有機會的話我會逐步補充Windows跟Mac OS的使用方法，不過除了安裝之外其實大多部份視差不多的。	
 			Ubuntu 可以藉由 Ubuntu 軟體中心進行安裝，僅需在裡面搜尋，便會自動下載及安裝。
 		\section{ Hello World }
 
-
+		\section{中文環境設置}
+		$\backslash$usepackage $\{$xeCJK$\}$
 		\section{基本指令}
 
 		\section{數學算式}
