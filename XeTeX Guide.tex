@@ -3,6 +3,9 @@
 %開啟設定字體
 %\usepackage{fontspect}
 
+\usepackage{xcolor}
+\usepackage{listings}
+
 %使用xeCJK package
 \usepackage{xeCJK}
 
@@ -44,6 +47,14 @@
 
 \date{\today}
 
+\lstset
+{
+    language=[LaTeX]TeX,
+    breaklines=true,
+    basicstyle=\tt\scriptsize,
+    keywordstyle=\color{blue},
+    identifierstyle=\color{magenta},
+}
 
 
 \begin{document}
@@ -62,13 +73,46 @@
 				\TeX 是Donald Ervin Knuth教授所設計出來的排版軟體\footnote{中文維基百科} ，
 			\subsection{\XeLaTeX}
 		\section{ \XeLaTeX 環境設定}
-			我在這邊所使用的是 Ubuntu 14.04 LTS，並且純粹以TeXworks(http://www.tug.org/texworks/)進行環境整合與編譯。後續有機會的話我會逐步補充Windows跟Mac OS的使用方法，不過除了安裝之外其實大多部份視差不多的。	
+			我在這邊所使用的是 Ubuntu 16.04 LTS，並且純粹以TeXworks(http://www.tug.org/texworks/)進行環境整合與編譯。後續有機會的話我會逐步補充Windows跟Mac OS的使用方法，不過除了安裝之外其實大多部份視差不多的。	
 			Ubuntu 可以藉由 Ubuntu 軟體中心進行安裝，僅需在裡面搜尋，便會自動下載及安裝。
-		\section{ Hello World }
-
-		\section{中文環境設置}
-		$\backslash$usepackage $\{$xeCJK$\}$
-		\section{基本指令}
-
+			\subsection{中文環境設置}
+			$\backslash$usepackage $\{$xeCJK$\}$
+		
+		\section{基礎操作}
+			\subsection{ Hello World }
+			\begin{lstlisting}
+\documentclass{article}
+\begin{doucument}
+Hello World!
+\end{document}
+			\end{lstlisting}
+			\subsection{設定作者、日期、標題頁面}
+			\begin{lstlisting} 
+\title{標題}
+\author{作者名稱}
+\date{\today}
+\maketitle
+			\end{lstlisting}
+			\subsection{段落}
+				\begin{lstlisting}
+\section{大段落}
+\subsection{中段落}
+\subsubsection{小段落}
+				\end{lstlisting}
+					\subsubsection{小段落}
+				沒有更小的段落了
+			\subsection{項目}
+				\begin{itemize}
+					\item 項目一 
+					\item 項目二
+				\end{itemize}
+				\begin{enumerate}
+					\item 項目一 
+					\item 項目二
+				\end{enumerate}
+				\begin{description}
+					\item [Ant] 螞蟻
+					\item [Elephant]大象
+				\end{description}
 		\section{數學算式}
 \end{document}
